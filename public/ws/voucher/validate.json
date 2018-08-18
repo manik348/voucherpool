@@ -1,0 +1,89 @@
+{
+	"id": "72fb7b2e-ee8e-d0b6-8a1d-3e2948f9ae4a",
+	"name": "VoucherPool",
+	"description": "This is a colletion for testing the VoucherBox webservice.",
+	"order": [
+		"d6f9d3dc-bd69-c4b1-8217-a3b1f32c3a05",
+		"fbe0684c-a2ac-2df3-0513-583ce95da8f0"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1510444019196,
+	"owner": "2374636",
+	"public": false,
+	"requests": [
+		{
+			"id": "d6f9d3dc-bd69-c4b1-8217-a3b1f32c3a05",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://voucherbox.test/ws/voucher/validate.json?code=15WJGYQ32&email=john@gmail.com",
+			"queryParams": [
+				{
+					"key": "code",
+					"value": "15WJGYQ32",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "john@gmail.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510455642309,
+			"name": "Validate Voucher",
+			"description": "This is used to validate a voucher in the system. It receives a Voucher Code and Email and validates the Voucher Code. In Case it is valid, return the Percentage Discount\nand set the date of usage.",
+			"collectionId": "72fb7b2e-ee8e-d0b6-8a1d-3e2948f9ae4a",
+			"responses": []
+		},
+		{
+			"id": "fbe0684c-a2ac-2df3-0513-583ce95da8f0",
+			"headers": "",
+			"headerData": [],
+			"url": "http://voucherbox.test/ws/voucher/list.json?email=john@gmail.com",
+			"queryParams": [
+				{
+					"key": "email",
+					"value": "john@gmail.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510449192746,
+			"name": "List Vouchers",
+			"description": "For a given Email, return all his valid Voucher Codes with the Name of the Special Offer.",
+			"collectionId": "72fb7b2e-ee8e-d0b6-8a1d-3e2948f9ae4a",
+			"responses": []
+		}
+	]
+}
